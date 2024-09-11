@@ -10,10 +10,10 @@ private_app_subnet_az2_cidr  = "10.3.0.0/24"
 private_data_subnet_az1_cidr = "10.4.0.0/24"
 private_data_subnet_az2_cidr = "10.5.0.0/24"
 
-# Security group variables
+# security group variables
 ssh_ip = "2.120.140.109/32" # your IP
 
-# RDS variables
+# rds variables
 database_identifier = "dev-rds-db"
 database_engine = "mysql"
 engine_version = "8.0.36"
@@ -26,3 +26,10 @@ parameter_groupname = "dev-para-group"
 # acm variables
 domain_name = "cloudspace-consulting.com"
 alternative_names = "*.cloudspace-consulting.com"
+
+# alb variables
+target_type = "ip"
+
+# s3 variables
+env_file_bucket_name = "ecs-env-file-bucket-st"
+env_file_name = "rentzone.env"
