@@ -14,17 +14,17 @@ private_data_subnet_az2_cidr = "10.5.0.0/24"
 ssh_ip = "2.120.140.109/32" # your IP
 
 # rds variables
-database_identifier = "dev-rds-db"
-database_engine = "mysql"
-engine_version = "8.0.36"
+database_identifier     = "dev-rds-db"
+database_engine         = "mysql"
+engine_version          = "8.0.36"
 database_instance_class = "db.t3.medium"
-db_master_username = "admin1982"
-db_master_password = "nimda1982"
-database_name = "applicationdb"
-parameter_groupname = "dev-para-group"
+db_master_username      = "admin1982"
+db_master_password      = "nimda1982"
+database_name           = "applicationdb"
+parameter_groupname     = "dev-para-group"
 
 # acm variables
-domain_name = "cloudspace-consulting.com"
+domain_name       = "cloudspace-consulting.com"
 alternative_names = "*.cloudspace-consulting.com"
 
 # alb variables
@@ -32,4 +32,13 @@ target_type = "ip"
 
 # s3 variables
 env_file_bucket_name = "ecs-env-file-bucket-st"
-env_file_name = "rentzone.env"
+env_file_name        = "rentzone.env"
+
+# ecs variables
+architecture    = "X86_64" # "ARM64" for mac users
+container_image = "uri of the docker image"
+# copy the uri of the docker image we pushed into our ecr repository
+# go to aws ecr; select your repository; click latest or whatever tag you have; copy URI
+
+# route53 variables
+record_name = "www"
