@@ -1,5 +1,7 @@
 # Dynamic Web App on AWS with Terraform Modules, Docker, Amazon ECR, and ECS
 
+![Screenshot (547)](https://github.com/user-attachments/assets/259413e6-a161-44c5-9df4-c1feacdc66bb)
+
 Thrilled to announce the completion of my latest project: a fully operational dynamic web application deployed and hosted on AWS using Terraform Modules, Docker, Amazon ECR, and Amazon ECS!
 
 This project is distinguished by the extensive use of AWS services, guaranteeing high availability, scalability, and robust security. It showcases the capability to design and implement intricate infrastructure solutions following modern DevOps methodologies.
@@ -80,7 +82,9 @@ Replace the source with the SSH URL of your terraform-modules repository in your
 We add //vpc to the end of the SSH URL because the module is located in the vpc folder
 
 You need to do the same for the following modules that we create
- 
+
+![image](https://github.com/user-attachments/assets/8a67b165-5eaa-49aa-9d0b-40b84d46ed1c)
+
 touch terraform.tfvars
 
 Copy the terraform file from the shared repository into it.
@@ -297,7 +301,9 @@ This token will be used by docker to clone the application codes repository when
 Github -> select your profile -> settings -> Developer settings -> Personal access tokens -> Tokens (classic) - > Generate new token -> Generate new token classic
 
 Edit it as you see in the following example: 
- 
+
+![image](https://github.com/user-attachments/assets/897e71d8-bb49-448d-a2ca-37a2dc91e60b)
+
 Remember to copy your personal access token and save it anywhere
 
 ## Create a Dockerfile
@@ -317,6 +323,8 @@ Create a new folder for the application.
 copy and paste into it the following: https://github.com/Silas-cloudspace/docker-projects/blob/main/rentzone/Dockerfile
 
 We will use a LAMP stack to build this application. A lamp stack is a group of open-source software that we can use to build a dynamic web application:
+
+![image](https://github.com/user-attachments/assets/3d5e8365-7b72-45c2-9487-22f073275cd4)
  
   •	Linux is the operating system we will use to run the stack.
 
@@ -467,7 +475,9 @@ This bucket will be used to upload the environment file we created.
 When we create the ECS tags, the ECS tag will retrieve the environment variables from the file in the S3 bucket.
 
 Copy the “rentzone.env” file stored in your computer on docker-projects > rentzone to “rentzone-infrastructure-ecs” directory in VS Code
- 
+
+ ![image](https://github.com/user-attachments/assets/26308926-98dc-46cc-9ba8-b2fb449c7d68)
+
 Add “rentzone.env” to .gitignore
 
 Navigate to the “rentzone-infrastructure-ecs” directory
