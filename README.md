@@ -1,6 +1,6 @@
-# Dynamic Web App on AWS with Terraform, Docker, Amazon ECR, and ECS
+# Dynamic Web App on AWS with Terraform Modules, Docker, Amazon ECR, and ECS
 
-Thrilled to announce the completion of my latest project: a fully operational dynamic web application deployed and hosted on AWS using Terraform modules, Docker, Amazon ECR, and Amazon ECS!
+Thrilled to announce the completion of my latest project: a fully operational dynamic web application deployed and hosted on AWS using Terraform Modules, Docker, Amazon ECR, and Amazon ECS!
 
 This project is distinguished by the extensive use of AWS services, guaranteeing high availability, scalability, and robust security. It showcases the capability to design and implement intricate infrastructure solutions following modern DevOps methodologies.
 
