@@ -31,6 +31,7 @@ Create 3 new files in the “vpc” folder: touch main.tf variables.tf outputs.t
 Copy the terraform files from the shared repository into them.
 
 Run:
+
   •	git add .
   
   •	git commit -m “created vpc module”
@@ -48,9 +49,11 @@ I’ve named mine “rentzone-infrastructure-ecs”
 For storing the Terraform state in the S3 and for locking Terraform state in the Dynamodb
 
 Go to VS Code and create a new folder and name it “remote_backend” in the “rentzone-infrastructure-ecs” directory
+
   •	mkdir remote_backend
 
 Navigate to this new folder and create a new file: “backend”
+
   •	touch backend
 
 Copy the terraform file from the shared repository into it.
@@ -94,12 +97,17 @@ Copy the terraform file from the shared repository into it.
 create a .gitignore.tf file and add the”terraform.tfvars” into it
 
 ### Important: Your code will be bigger but run it only until the “module ‘vpc’”. Comment the rest of it by:
+
   •	For Windows/Linux: Press Shift + Alt + A
+  
   •	For macOS: Press Shift + Option + A
 
 Run:
+
   •	terraform fmt
+  
   •	terraform init 
+  
   •	terraform apply
 
 ## Create Terraform Module for Nat Gateway
@@ -115,8 +123,11 @@ touch main.tf variables.tf
 Copy the terraform files from the shared repository into them.
 
 Run:
+
   •	git add .
+  
   •	git commit -m “created nat gateway module”
+  
   •	git push
 
 ## Create NAT Gateways for the VPC
@@ -130,12 +141,17 @@ Replace the source with the SSH URL of your terraform-modules repository in your
 Add //nat_gateway to the end of the SSH URL because the module is located in the GitHub “nat_gateway” folder we recently created
 
 ### Important: Your code will be bigger but run it only until the “module ‘nat_gateway’”. Comment the rest of it by:
+
   •	For Windows/Linux: Press Shift + Alt + A
+  
   •	For macOS: Press Shift + Option + A
 
 Run:
+
   •	terraform fmt
+  
   •	terraform init
+  
   •	terraform apply
 
 ## Create Terraform Module for the security groups
@@ -151,8 +167,11 @@ touch main.tf variables.tf outputs.tf
 Copy the terraform files from the shared repository into them.
 
 Run:
+
   •	git add .
+  
   •	git commit -m “created security groups module”
+  
   •	git push
 
 ## Create Security Groups for the VPC
@@ -166,12 +185,17 @@ Replace the source with the SSH URL of your terraform-modules repository in your
 Add //security_groups to the end of the SSH URL because the module is located in the GitHub “security_groups” folder we recently created
 
 ### Important: Your code will be bigger but run it only until the “module ‘security_group”. Comment the rest of it by:
+
   •	For Windows/Linux: Press Shift + Alt + A
+  
   •	For macOS: Press Shift + Option + A
 
 Run:
+
   •	terraform fmt
+  
   •	terraform init
+  
   •	terraform apply
 
 ## Create Terraform Module for the Database
@@ -187,8 +211,11 @@ touch main.tf variables.tf
 Copy the terraform files from the shared repository into them.
 
 Run:
+
   •	git add .
+  
   •	git commit -m “created rds module”
+  
   •	git push
 
 ## Create Database for the VPC
@@ -202,12 +229,17 @@ Replace the source with the SSH URL of your terraform-modules repository in your
 Add //rds to the end of the SSH URL because the module is located in the GitHub “rds” folder we recently created
 
 ### Important: Your code will be bigger but run it only until the “module ‘rds”. Comment the rest of it by:
+
   •	For Windows/Linux: Press Shift + Alt + A
+  
   •	For macOS: Press Shift + Option + A
 
 Run:
+
   •	terraform fmt
+  
   •	terraform init
+  
   •	terraform apply
 
 ## Create Terraform Module for the ACM
@@ -223,8 +255,11 @@ touch main.tf variables.tf outputs.tf
 Copy the terraform files from the shared repository into them.
 
 Run:
+
   •	git add .
+  
   •	git commit -m “created acm module”
+  
   •	git push
 
 ## Request SSL certificate for your AWS Resources
@@ -238,12 +273,17 @@ Replace the source with the SSH URL of your terraform-modules repository in your
 Add //acm to the end of the SSH URL because the module is located in the GitHub “acm” folder we recently created
 
 ### Important: Your code will be bigger but run it only until the “module ‘ssl_certificate”. Comment the rest of it by:
+
   •	For Windows/Linux: Press Shift + Alt + A
+  
   •	For macOS: Press Shift + Option + A
 
 Run:
+
   •	terraform fmt
+  
   •	terraform init
+  
   •	terraform apply
 
 ## Create Terraform Module for the Application Load Balancer
@@ -259,8 +299,11 @@ touch main.tf variables.tf outputs.tf
 Copy the terraform files from the shared repository into them.
 
 Run:
+
   •	git add .
+  
   •	git commit -m “created alb module”
+  
   •	git push
 
 ## Create the Load Balancer
@@ -274,12 +317,17 @@ Replace the source with the SSH URL of your terraform-modules repository in your
 Add //alb to the end of the SSH URL because the module is located in the GitHub “alb” folder we recently created
 
 ### Important: Your code will be bigger but run it only until the “module ‘application_load_balancer”. Comment the rest of it by:
+
   •	For Windows/Linux: Press Shift + Alt + A
+  
   •	For macOS: Press Shift + Option + A
 
 Run:
+
   •	terraform fmt
+  
   •	terraform init
+  
   •	terraform apply
 
 ## Create a private repository to store the application codes 
@@ -340,17 +388,17 @@ On line 93 we will replace the file named “AppServiceProvider.php” on our se
 
 We do this because we want to upload a value in it, so when we redirect our traffic from http to https our website function properly.
 
-  •	Create the replacement file in our project folder
+•	Create the replacement file in our project folder
 
-     o	Copy “AppServiceProvider.php”
+  o	Copy “AppServiceProvider.php”
 
-     o	In VS code navigate to rentzone folder
+  o	In VS code navigate to rentzone folder
 
-    o	Create a new file and name it “AppServiceProvider.php”
+  o	Create a new file and name it “AppServiceProvider.php”
 
-    o	Paste into it the following: https://github.com/Silas-cloudspace/docker-projects/blob/main/rentzone/AppServiceProvider.php
+  o	Paste into it the following: https://github.com/Silas-cloudspace/docker-projects/blob/main/rentzone/AppServiceProvider.php
 
-    o	This file is to redirect http traffic to https
+   o	This file is to redirect http traffic to https
 
 ## Create a script to build the Docker image
 
@@ -403,11 +451,11 @@ Navigate to rentzone directory on VS Code and run:
 
 ### Retag docker image
 
-  o	Run: docker tag <image-tag> <repository-uri>
+o	Run: docker tag <image-tag> <repository-uri>
 
-      •	You can check the tag name you gave to your image by running “docker image ls”. In this case you will see the name “rentzone”
+  •	You can check the tag name you gave to your image by running “docker image ls”. In this case you will see the name “rentzone”
 
-      •	In order to get the repository uri, go to ECR in the AWS console
+  •	In order to get the repository uri, go to ECR in the AWS console
 
 ### login to ecr
 
@@ -466,8 +514,11 @@ touch main.tf variables.tf outputs.tf
 Copy the terraform files from the shared repository into them.
 
 Run:
+
   •	git add .
+  
   •	git commit -m “created s3 module”
+  
   •	git push
 
 ## Create the S3 bucket
@@ -491,12 +542,17 @@ Replace the source with the SSH URL of your terraform-modules repository in your
 Add //s3 to the end of the SSH URL because the module is located in the GitHub “s3” folder we recently created
 
 ### Important: Your code will be bigger but run it only until the “module ‘s3_bucket”. Comment the rest of it by:
+
   •	For Windows/Linux: Press Shift + Alt + A
+  
   •	For macOS: Press Shift + Option + A
 
 Run:
+
   •	terraform fmt
+  
   •	terraform init
+  
   •	terraform apply
 
 ## Create Terraform Module for the Task Execution Role
@@ -512,8 +568,11 @@ touch main.tf variables.tf outputs.tf
 Copy the terraform files from the shared repository into them.
 
 Run:
+
   •	git add .
+  
   •	git commit -m “created iam_role module”
+  
   •	git push
 
 ## Create a Task Execution Role for your ECS Tasks
@@ -527,12 +586,17 @@ Replace the source with the SSH URL of your terraform-modules repository in your
 Add //iam_role to the end of the SSH URL because the module is located in the GitHub “iam_role” folder we recently created
 
 ### Important: Your code will be bigger but run it only until the “module ‘ecs_task_execution_role’”. Comment the rest of it by:
+
   •	For Windows/Linux: Press Shift + Alt + A
-  •	For macOS: Press Shift + Option + A.
+  
+  •	For macOS: Press Shift + Option + A
 
 Run:
+
   •	terraform fmt
+  
   •	terraform init
+  
   •	terraform apply
 
 ## Create Terraform Module for ECS clusters, Task Definition and Service
@@ -548,8 +612,11 @@ touch main.tf variables.tf outputs.tf
 Copy the terraform files from the shared repository into them.
 
 Run:
+
   •	git add .
+  
   •	git commit -m “created ecs module”
+  
   •	git push
 
 ## Create an ECS Cluster Task Definition and Service
@@ -563,12 +630,17 @@ Replace the source with the SSH URL of your terraform-modules repository in your
 Add //ecs to the end of the SSH URL because the module is located in the GitHub “ecs” folder we recently created
 
 ### Important: Your code will be bigger but run it only until the “module ‘ecs”. Comment the rest of it by:
+
   •	For Windows/Linux: Press Shift + Alt + A
+  
   •	For macOS: Press Shift + Option + A
 
 Run:
+
   •	terraform fmt
+  
   •	terraform init
+  
   •	terraform apply
 
 ## Create Terraform Module for ECS Auto Scaling Group
@@ -584,8 +656,11 @@ touch main.tf variables.tf
 Copy the terraform files from the shared repository into them.
 
 Run:
+
   •	git add .
+  
   •	git commit -m “created asg_ecs module”
+  
   •	git push
 
 ## Create an ECS Auto Scaling Group
@@ -599,12 +674,17 @@ Replace the source with the SSH URL of your terraform-modules repository in your
 Add //asg_ecs to the end of the SSH URL because the module is located in the GitHub “asg_ecs” folder we recently created
 
 ### Important: Your code will be bigger but run it only until the “module ‘asg_ecs”. Comment the rest of it by:
+
   •	For Windows/Linux: Press Shift + Alt + A
+  
   •	For macOS: Press Shift + Option + A
 
 Run:
+
   •	terraform fmt
+  
   •	terraform init
+  
   •	terraform apply
 
 ## Create Terraform Module for Route53
@@ -620,8 +700,11 @@ touch main.tf variables.tf
 Copy the terraform files from the shared repository into them.
 
 Run:
+
   •	git add .
+  
   •	git commit -m “created route53 module”
+  
   •	git push
 
 ## Create Route53 DNS Records
@@ -635,11 +718,17 @@ Replace the source with the SSH URL of your terraform-modules repository in your
 Add //route53 to the end of the SSH URL because the module is located in the GitHub “route53” folder we recently created
 
 Run:
+
   •	git add .
+  
   •	git commit -m “updated files”
+  
   •	git push
+  
   •	terraform fmt
+  
   •	terraform init
+  
   •	terraform apply
 
 ### ctrl+click on the url and you will see the deployed application on AWS using Terraform Modules and ECS Fargate.
