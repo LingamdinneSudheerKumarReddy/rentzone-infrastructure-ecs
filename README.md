@@ -32,7 +32,9 @@ Copy the terraform files from the shared repository into them.
 
 Run:
   •	git add .
+  
   •	git commit -m “created vpc module”
+  
   •	git push
 
 ## Create and clone a Terraform Infrastructure Code Repository
